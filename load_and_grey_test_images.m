@@ -1,8 +1,8 @@
 cd 'images\test_images';
 HW1 = rgb2gray(imread('HW1.png'));
-HW4 = rgb2gray(imread('HW4.png'));
-PR4 = rgb2gray(imread('PR4.png'));
-PR7 = rgb2gray(imread('PR7.png'));
+%HW4 = rgb2gray(imread('HW4.png'));
+%PR4 = rgb2gray(imread('PR4.png'));
+%PR7 = rgb2gray(imread('PR7.png'));
 %figure, image(HW1), axis, colormap gray(256);
 %figure, image(HW4), axis, colormap gray(256);
 %figure, image(PR4), axis, colormap gray(256);
