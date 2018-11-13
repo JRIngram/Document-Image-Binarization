@@ -1,4 +1,4 @@
-function niblackedImage = niblack(image, neighbourhoodSize,k)
+function niblackedImage = niblack(image, neighbourhoodSize, k)
 %NIBLACK Summary of this function goes here
 %   Detailed explanation goes here
     avg_filter = fspecial('average', neighbourhoodSize); %Creates an average filter
