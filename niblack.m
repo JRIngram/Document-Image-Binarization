@@ -3,10 +3,9 @@ function niblackedImage = niblack(image, neighbourhoodSize, k)
 %Detailed explanation goes here
     avg_filter = fspecial('average', neighbourhoodSize); %Creates an average filter
     avgImage = imfilter(image, avg_filter); %Averages the image
-    stdImage = stdfilt(avgImage); %Calculates standard deviation
+    stdImage = stdfilt(avgImage, true(neighbourhoodSize)); %Calculates standard deviation
     kStdImage = k .* stdImage;
     niblackThreshold = double(avgImage) + kStdImage;
     niblackedImage = threshold(image, niblackThreshold);
-
 end
 

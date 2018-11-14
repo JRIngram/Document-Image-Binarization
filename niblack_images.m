@@ -2,7 +2,7 @@ clear;
 load_and_grey_test_images;
 
 %Best values as defined by Valverde and Grigat in Optimum Binarization of
-%Technical Document Images (200)
+%Technical Document Images (2000)
 nSize = 15; %neighbourhoodSize
 k = -0.2;
 niblackHW1 = niblack(HW1, nSize, k);

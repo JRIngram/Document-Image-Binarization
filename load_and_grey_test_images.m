@@ -3,6 +3,7 @@ HW1 = rgb2gray(imread('HW1.png'));
 HW4 = rgb2gray(imread('HW4.png'));
 PR4 = rgb2gray(imread('PR4.png'));
 PR7 = rgb2gray(imread('PR7.png'));
+RB1 = rgb2gray(imread('RB1.png'));
 cd ../ground_truths
 
 HW1GT = uint8(imread('HW1_GT.tiff'));
