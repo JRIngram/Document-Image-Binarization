@@ -1,3 +1,4 @@
+clear
 cd 'images\test_images';
 HW1 = rgb2gray(imread('HW1.png'));
 HW4 = rgb2gray(imread('HW4.png'));

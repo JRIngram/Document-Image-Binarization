@@ -1,7 +1,8 @@
 function PSNRs = calculateBestNeighbourhood(image, groundTruth)
-%CALCULATEBESTNEIGHBOURHOOD Summary of this function goes here
+%CALCULATEBESTNEIGHBOURHOOD Calculates the PSNR values for neighbour values
+%between 1 and 750 - increasing at intervals of 2.
 %   Detailed explanation goes here
-    k = 0.5;
+    k = -0.2;
     nib = @niblack
     PSNRs = [];
     for n = [1:2:750];
