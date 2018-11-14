@@ -4,9 +4,10 @@ function PSNRs = calculateBestNeighbourhood(image, groundTruth)
     k = 0.5;
     nib = @niblack
     PSNRs = [];
-    for n = [1:750];
+    for n = [1:2:750];
         newImage = nib(image, n, k);
-        newPSNR = psnr(groundTruth, newImage);
+        binaryNewImage = convertToBinary(newImage);
+        newPSNR = psnr(binaryNewImage, groundTruth);
         PSNRs = [PSNRs, newPSNR];
         disp(n)
     end
