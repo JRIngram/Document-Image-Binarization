@@ -9,5 +9,5 @@ PSNRHW1 = calculateNeighbourhoodPSNRs(HW1,HW1GT);
 PSNRHW4 = calculateNeighbourhoodPSNRs(HW4,HW4GT);
 PSNRPR4 = calculateNeighbourhoodPSNRs(PR4,PR4GT);
 PSNRPR7 = calculateNeighbourhoodPSNRs(PR7,PR7GT);
-plot(n,PSNRHW1, n,PSNRHW4, n,PSNRPR4, n,PSNRPR7), xlabel('Neighbourhood Size'), ylabel('PSNR'), legend('HW1','HW4','PR4','PR7'), title('PSNR of Niblacked images vs. Ground Truth images with different Neighbourhood Sizes used')
+plot(n,PSNRHW1, n,PSNRHW4, n,PSNRPR4, n,PSNRPR7), xlabel('Neighbourhood Size'), ylabel('PSNR'), legend('HW1','HW4','PR4','PR7'), title({'PSNR of Niblacked images vs. Ground Truth images'; 'with different Neighbourhood Sizes used'})
 clear n;
