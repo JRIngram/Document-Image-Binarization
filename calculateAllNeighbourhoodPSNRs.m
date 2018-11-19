@@ -4,7 +4,7 @@
 %   750 times for each image.
 clear;
 load_and_grey_test_images;
-n = [1:2:750];
+n = [1:2:999];
 PSNRHW1 = calculateNeighbourhoodPSNRs(HW1,HW1GT);
 PSNRHW4 = calculateNeighbourhoodPSNRs(HW4,HW4GT);
 PSNRPR4 = calculateNeighbourhoodPSNRs(PR4,PR4GT);
