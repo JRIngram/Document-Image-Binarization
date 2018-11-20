@@ -1,3 +1,5 @@
+%Performs Otsu's method on all images and calulcates the PSNR for all of
+%these images and the ground truths.
 clear;
 load_and_grey_test_images;
 HW1OtsuPsnr = otsuPSNR(HW1, HW1GT);

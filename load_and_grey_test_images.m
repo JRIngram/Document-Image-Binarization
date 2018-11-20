@@ -1,3 +1,6 @@
+%Loads and Greys the images used for testing and the ground truth version
+%of the images.
+
 clear
 cd 'images\test_images';
 HW1 = rgb2gray(imread('HW1.png'));
