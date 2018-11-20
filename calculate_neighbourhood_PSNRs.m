@@ -10,7 +10,7 @@ function PSNRs = calculate_neighbourhood_PSNR(image, groundTruth)
     PSNRs = [];
     for n = [1:2:999];
         newImage = nib(image, n, k);
-        binaryNewImage = convertToBinary(newImage);
+        binaryNewImage = convert_to_binary(newImage);
         newPSNR = psnr(binaryNewImage, groundTruth);
         PSNRs = [PSNRs, newPSNR];
         disp(n)
