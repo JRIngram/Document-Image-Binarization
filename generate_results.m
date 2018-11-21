@@ -1,15 +1,18 @@
-%calculate_all_neighbour_PSNRs;
+clear;
+%Loads and greyscales all the test images.
 load_and_grey_test_images;
 
 %Binarizes images using Otsu's method
 threshold = graythresh(HW1);
-HW1Otsu = convert_to_binary(HW1, threshold);
+HW1Otsu = imbinarize(HW1, threshold);
 threshold = graythresh(HW4);
-HW4Otsu = convert_to_binary(HW4, threshold);
+HW4Otsu = imbinarize(HW4, threshold);
 threshold = graythresh(PR4);
-PR4Otsu = convert_to_binary(PR4, threshold);
+PR4Otsu = imbinarize(PR4, threshold);
 threshold = graythresh(PR7);
-PR7Otsu = convert_to_binary(PR7, threshold);
+PR7Otsu = imbinarize(PR7, threshold);
+otsu_PSNR_all;
+clear threshold; %Removes threshold from memory
 
 k = -0.2; %K constant value
 %Binarize images using Niblack's method, with lowest PNSR neighbourhood.
@@ -23,6 +26,7 @@ HW1NibMax = niblack(HW1, 537, k);
 HW4NibMax = niblack(HW4, 665, k);
 PR4NibMax = niblack(PR4, 875, k);
 PR7NibMax = niblack(PR7, 573, k);
+clear k; %Removes k from memory
 
 %Displays images that have been binarized using Otsu's method.
 figure, image(HW1Otsu), axis off, colormap gray(2), title('HW1 Binarized using Otsu''s method');
@@ -43,3 +47,8 @@ figure, image(HW1NibMax), axis off, colormap gray(2), title('HW1 Binarized using
 figure, image(HW4NibMax), axis off, colormap gray(2), title('HW4 Binarized using Niblacks''s method with a neighbourhood size of 665');
 figure, image(PR4NibMax), axis off, colormap gray(2), title('PR4 Binarized using Niblacks''s method with a neighbourhood size of 875');
 figure, image(PR7NibMax), axis off, colormap gray(2), title('PR7 Binarized using Niblacks''s method with a neighbourhood size of 573');
+
+%Creates figure to display PSNR value for different neighbourhood sizes.
+%This may take some time to run: see psnr1000.fig to see the results
+%without running this script.
+calculate_all_neighbourhood_PSNRs;

@@ -6,14 +6,13 @@ function PSNRs = calculate_neighbourhood_PSNR(image, groundTruth)
 % "Niblacked", the image is compared with a ground truth version of the
 % image to calculate a PSNR value.
     k = -0.2;
-    nib = @niblack
+    nib = @niblack;
     PSNRs = [];
     for n = [1:2:999];
         newImage = nib(image, n, k);
         binaryNewImage = convert_to_binary(newImage);
         newPSNR = psnr(binaryNewImage, groundTruth);
         PSNRs = [PSNRs, newPSNR];
-        disp(n)
     end
 end
 
