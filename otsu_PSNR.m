@@ -1,4 +1,4 @@
-function PSNR = otsuPSNR(image, groundtruth)
+function PSNR = otsu_PSNR(image, groundtruth)
 %OTSUPSNR Performs Otsu's method on an image and then calculates the PSNR
 %between the binarized image and the ground truth.
     threshold = graythresh(image);
