@@ -1,5 +1,5 @@
 function PSNRs = calculate_neighbourhood_PSNR(image, groundTruth)
-%CALCULATEBESTNEIGHBOURHOOD Calculates the PSNR values for differing 
+%CALCULATE_NEIGHBOURHOOD_PSNR Calculates the PSNR values for differing 
 %neighbourhood sizes values.
 % Performs Niblack's method  for differing neighbourhood sizes values 
 % between 1 and 1000 - increasing at intervals of 2. Once an image has been
