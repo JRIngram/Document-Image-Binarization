@@ -6,7 +6,7 @@ The PSNR can also be calculated between the ground truth and the binarized image
 *Completed as part of CS3330 - Image and Video Processing at Aston University.*
 
 ## Usage
-### generate_results.m
+### [generate_results.m](generate_results.m)
 __This will take a large amount of time to run!__
 
 This runs a Niblack's method and Otsu's method on multiple test images.
@@ -15,7 +15,7 @@ This runs a Niblack's method and Otsu's method on multiple test images.
 After these have been performed, a chart will be plotted of all the PSNR values calculated each time Niblack's was used to binarize an image.
 To save time this chart can be seen in [psnr1000.fig](psnr1000.fig).
 
-### niblack.m
+### [niblack.m](niblack.m)
 This binarizes an image using Niblack's method. Pseudocode for Niblack's method is:
 ```
 	function niblack(image, neighbourhoodSize, k):
@@ -29,5 +29,5 @@ This binarizes an image using Niblack's method. Pseudocode for Niblack's method 
 ```
 This will return an image that has been binarized by Niblack's method.
 
-### otsu_PSNR.m
+### [otsu_PSNR.m](otsu_PSNR.m)
 This takes a ground truth version of an image and a non-binarized image. The non-binarized image is binarized using Otsu's method and the PSNR between the binarized image and groundtruth is calculated.
